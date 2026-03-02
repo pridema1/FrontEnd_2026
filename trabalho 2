@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+    <title>Material de Estudo - Funções em C</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Material de Estudo Digital</h1>
+        <h2>Funções na Linguagem C</h2>
+    </header>
+    <h2>O que são Funções?</h2>
+
+    <p>
+        Em C, uma função é um bloco de código que executa
+        uma tarefa específica. Ela permite organizar o programa em partes
+        menores e reutilizáveis.
+    </p>
+
+    <p>
+        Todo programa em C possui pelo menos uma função obrigatória:
+        main(), que é o ponto de início da execução.
+    </p>
+
+    <h2>Estrutura de uma Função</h2>
+
+    <p>A estrutura básica de uma função em C é:</p>
+
+<pre>
+tipo_retorno nome_da_funcao(parametros){
+    corpo da função
+}
+</pre>
+
+    <h3>Componentes:</h3>
+    <ul>
+        <li>Tipo de retorno (int, float, void...)</li>
+        <li>Nome da função</li>
+        <li>Parâmetros (opcional)</li>
+        <li>Bloco de código</li>
+    </ul>
+
+    <h2>Exemplo Prático</h2>
+
+    <p>Função que soma dois números:</p>
+
+<pre>
+#include <stdio.h>
+
+int somar(int a, int b){
+    return a + b;
+}
+
+int main(){
+    int resultado = somar(5, 3);
+    printf("Resultado: %d", resultado);
+    return 0;
+}
+</pre>
+
+    <p>
+        Nesse exemplo:
+    </p>
+
+    <ol>
+        <li>A função somar recebe dois inteiros.</li>
+        <li>Ela retorna a soma dos valores.</li>
+        <li>A função main chama a função e imprime o resultado.</li>
+    </ol>
+
+    <h2>Tipos de Funções</h2>
+
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Descrição</th>
+        </tr>
+        <tr>
+            <td>Com retorno</td>
+            <td>Retornam um valor usando return</td>
+        </tr>
+        <tr>
+            <td>Sem retorno (void)</td>
+            <td>Executam ações sem retornar valor</td>
+        </tr>
+        <tr>
+            <td>Com parâmetros</td>
+            <td>Recebem dados para processar</td>
+        </tr>
+        <tr>
+            <td>Sem parâmetros</td>
+            <td>Não recebem dados externos</td>
+        </tr>
+    </table>
+
+    <h2>Vantagens do Uso de Funções</h2>
+
+    <ul>
+        <li>Organização do código</li>
+        <li>Reutilização</li>
+        <li>Facilidade de manutenção</li>
+        <li>Melhor legibilidade</li>
+    </ul>
+
+</body>
