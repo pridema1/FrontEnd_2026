@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratório de Programação FrontEnd</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Laboratório de Programação FrontEnd</h1>
+      <p>Sete exercícios em uma página única, com validação, conversão, cálculo e manipulação de listas em tempo real.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Validador de CPF</h2>
+        <p class="description">Digite um CPF com ou sem pontuação e valide pelos dois dígitos verificadores.</p>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="cpfInput">CPF</label>
+            <input id="cpfInput" type="text" inputmode="numeric" placeholder="000.000.000-00">
+          </div>
+        </div>
+        <div class="actions">
+          <button id="cpfButton" type="button">Validar</button>
+        </div>
+        <div id="cpfResult" class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="card">
+        <h2>Conversor Dinâmico</h2>
+        <p class="description">Os campos reagem em tempo real, nos dois sentidos, com duas casas decimais.</p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="celsiusInput">Celsius (C)</label>
+            <input id="celsiusInput" type="number" step="0.1" placeholder="0.0">
+          </div>
+          <div class="field">
+            <label for="fahrenheitInput">Fahrenheit (F)</label>
+            <input id="fahrenheitInput" type="number" step="0.1" placeholder="32.0">
+          </div>
+        </div>
+        <div id="converterResult" class="result" aria-live="polite">Digite um valor em qualquer campo para converter.</div>
+      </article>
+
+      <article class="card">
+        <h2>Média Escolar</h2>
+        <p class="description">Informe o aluno e as três notas para gerar a média e a situação final.</p>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="studentName">Nome do aluno</label>
+            <input id="studentName" type="text" placeholder="Nome completo">
+          </div>
+          <div class="field">
+            <label for="grade1">Nota 1</label>
+            <input id="grade1" type="number" step="0.1" placeholder="0.0">
+          </div>
+          <div class="field">
+            <label for="grade2">Nota 2</label>
+            <input id="grade2" type="number" step="0.1" placeholder="0.0">
+          </div>
+          <div class="field full">
+            <label for="grade3">Nota 3</label>
+            <input id="grade3" type="number" step="0.1" placeholder="0.0">
+          </div>
+        </div>
+        <div class="actions">
+          <button id="averageButton" type="button">Calcular média</button>
+        </div>
+        <div id="averageResult" class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="card">
+        <h2>Taxas Infinity Bank</h2>
+        <p class="description">Simulador de venda parcelada com taxa da bandeira, juros mensais e tarifa fixa.</p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="flagSelect">Bandeira</label>
+            <select id="flagSelect">
+              <option value="visa">Visa</option>
+              <option value="master">Master</option>
+              <option value="elo">Elo</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="saleValue">Valor da venda</label>
+            <input id="saleValue" type="number" step="0.01" placeholder="0.00">
+          </div>
+          <div class="field full">
+            <label for="installments">Número de parcelas</label>
+            <input id="installments" type="number" min="1" step="1" placeholder="1">
+          </div>
+        </div>
+        <div class="actions">
+          <button id="bankButton" type="button">Calcular taxas</button>
+        </div>
+        <div id="bankResult" class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="card wide">
+        <h2>Gestão de Convidados VIP</h2>
+        <p class="description">Lista centralizada com edição, conclusão visual, exclusão e separadores discretos.</p>
+        <div class="guest-form">
+          <input id="guestInput" type="text" placeholder="Nome do convidado">
+          <button id="guestAddButton" type="button">Adicionar</button>
+        </div>
+        <ul id="guestList" class="guest-list"></ul>
+      </article>
+
+      <article class="card wide">
+        <h2>Crédito para Festas & Eventos</h2>
+        <p class="description">Orçamento com taxa de serviço e desconto fidelidade quando houver mais de 100 convidados.</p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="packageSelect">Pacote</label>
+            <select id="packageSelect">
+              <option value="standard">Standard</option>
+              <option value="premium">Premium</option>
+              <option value="deluxe">Infinity Deluxe</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="peopleCount">Quantidade de pessoas</label>
+            <input id="peopleCount" type="number" min="1" step="1" placeholder="100">
+          </div>
+        </div>
+        <div class="actions">
+          <button id="budgetButton" type="button">Calcular orçamento</button>
+        </div>
+        <div id="budgetResult" class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="card wide">
+        <h2>sValidador de Segurança Infinity</h2>
+        <p class="description">Análise de cartão com Luhn, bandeira, setor e identificação aproximada do emissor.</p>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="cardInput">Número do cartão</label>
+            <input id="cardInput" type="text" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000">
+          </div>
+        </div>
+        <div class="actions">
+          <button id="cardButton" type="button">Analisar cartão</button>
+        </div>
+        <div class="meta-grid">
+          <div class="stat"><span>Status</span><strong id="cardStatus">Aguardando análise</strong></div>
+          <div class="stat"><span>Bandeira</span><strong id="cardFlag">-</strong></div>
+          <div class="stat"><span>Categoria de setor</span><strong id="cardSector">-</strong></div>
+          <div class="stat"><span>Banco emissor</span><strong id="cardIssuer">-</strong></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
